@@ -1,4 +1,4 @@
-package me.dio.api_spring;
+package com.example.api_spring;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,4 +1,4 @@
-package me.dio.api_spring;
+package com.example.api_spring;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
