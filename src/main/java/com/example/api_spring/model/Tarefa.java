@@ -2,6 +2,7 @@ package com.example.api_spring.model;
 
 import jakarta.persistence.*;
 
+@Entity
 public class Tarefa {
 
     @Id

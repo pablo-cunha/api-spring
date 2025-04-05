@@ -2,12 +2,13 @@ package com.example.api_spring.controller;
 
 import com.example.api_spring.model.Tarefa;
 import com.example.api_spring.repository.TarefaRepository;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping
+@RequestMapping("/tarefas")
 public class TarefaController {
 
     private final TarefaRepository repository;
@@ -26,8 +27,9 @@ public class TarefaController {
         return repository.save(tarefa);
     }
 
-    @DeleteMapping
-    public void deleteTask(Long id) {
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deletarTarefa(@PathVariable Long id) {
         repository.deleteById(id);
+        return ResponseEntity.noContent().build();
     }
 }
